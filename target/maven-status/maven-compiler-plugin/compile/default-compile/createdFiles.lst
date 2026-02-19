@@ -1,7 +1,15 @@
 seng2050\Product.class
+seng2050\Semester.class
+seng2050\Student.class
+seng2050\EnrollmentServlet.class
+seng2050\Enrollment.class
 seng2050\LoginServlet.class
 seng2050\Main.class
+seng2050\SemesterServlet.class
 seng2050\LogoutServlet.class
 seng2050\ProductServlet.class
+seng2050\User.class
 seng2050\SessionServlet.class
+seng2050\Course.class
+seng2050\CourseServlet.class
 seng2050\RetrieveSessionServlet.class

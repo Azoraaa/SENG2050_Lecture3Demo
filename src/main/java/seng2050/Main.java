@@ -16,10 +16,10 @@ public class Main {
     tomcat.setBaseDir("temp");
 
     // Create and configure context
-    Context ctx = tomcat.addWebapp("", new File("webapps/ROOT").getAbsolutePath());
-    System.out.println("Root path (web apps): " + new File("webapps/ROOT").getAbsolutePath());
+    Context ctx = tomcat.addWebapp("", new File("Code/webapps/ROOT").getAbsolutePath());
+    System.out.println("Root path (web apps): " + new File("Code/webapps/ROOT").getAbsolutePath());
 
-    File rootDir = new File("webapps/ROOT");
+    File rootDir = new File("Code/webapps/ROOT");
     if (rootDir.exists() && rootDir.isDirectory()) {
       for (String fileName : rootDir.list()) {
         System.out.println("Found: " + fileName);
