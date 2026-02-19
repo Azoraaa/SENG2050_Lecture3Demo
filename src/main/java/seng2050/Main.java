@@ -46,7 +46,7 @@ public class Main {
     ctx.addServletMappingDecoded("/SessionServlet", "SessionServlet");
     ctx.addServletMappingDecoded("/RetrieveSessionServlet", "RetrieveSessionServlet");
     ctx.addServletMappingDecoded("/LogoutServlet", "LogoutServlet");
-    ctx.addServletMappingDecoded("/login", "LoginServlet");
+    ctx.addServletMappingDecoded("/LoginServlet", "LoginServlet");
     ctx.addServletMappingDecoded("/semester", "SemesterServlet");
     ctx.addServletMappingDecoded("/courses", "CourseServlet");
     ctx.addServletMappingDecoded("/enrollment", "EnrollmentServlet");
