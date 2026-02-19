@@ -6,14 +6,27 @@
 <body>
     <h2>UniX Login</h2>
 
-    <form action="ProductServlet" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"> 
-        <br>
-        <label for="password">Password:</label>
-        <input type="text" id="password" name="password"> 
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    <%@ page import="seng2050.Enrollment, seng2050.Course, java.util.*" %>
+
+<%
+    Enrollment enrollment = (Enrollment) request.getAttribute("enrollment");
+%>
+
+<h2>Enrollment Successful</h2>
+
+Student: <%= enrollment.getStudent().getUsername() %><br/>
+Semester: <%= enrollment.getSemester() %><br/>
+
+Courses:
+<ul>
+<%
+    for (Course c : enrollment.getCourses()) {
+%>
+    <li><%= c.getCourseCode() %></li>
+<%
+    }
+%>
+</ul>
+
 </body>
 </html>

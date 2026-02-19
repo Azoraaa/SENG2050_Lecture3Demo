@@ -34,11 +34,15 @@ public class Main {
     }
 
     // Add a servlet
-    tomcat.addServlet("", "LoginServlet", new LoginServlet()); 
     tomcat.addServlet("", "SessionServlet", new SessionServlet()); 
     tomcat.addServlet("", "RetrieveSessionServlet", new RetrieveSessionServlet()); 
     tomcat.addServlet("", "LogoutServlet", new LogoutServlet()); 
     tomcat.addServlet("", "ProductServlet", new ProductServlet()); 
+
+    tomcat.addServlet("", "LoginServlet", new LoginServlet()); 
+    tomcat.addServlet("", "SemesterServlet", new SemesterServlet());
+    tomcat.addServlet("", "CourseServlet", new CourseServlet());
+    tomcat.addServlet("", "EnrollmentServlet", new EnrollmentServlet());
 
     // Map the servlet
     ctx.addServletMappingDecoded("/LoginServlet", "LoginServlet");
@@ -46,6 +50,11 @@ public class Main {
     ctx.addServletMappingDecoded("/RetrieveSessionServlet", "RetrieveSessionServlet");
     ctx.addServletMappingDecoded("/LogoutServlet", "LogoutServlet");
     ctx.addServletMappingDecoded("/ProductServlet", "ProductServlet");
+
+    ctx.addServletMappingDecoded("/login", "LoginServlet");
+    ctx.addServletMappingDecoded("/semester", "SemesterServlet");
+    ctx.addServletMappingDecoded("/courses", "CourseServlet");
+    ctx.addServletMappingDecoded("/enrollment", "EnrollmentServlet");
  
     // Start Tomcat
     try {

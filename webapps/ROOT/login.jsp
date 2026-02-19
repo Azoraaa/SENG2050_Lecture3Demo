@@ -6,7 +6,7 @@
 <body>
     <h2>UniX Login</h2>
 
-    <form action="ProductServlet" method="post">
+    <form action="LoginServlet" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username"> 
         <br>
